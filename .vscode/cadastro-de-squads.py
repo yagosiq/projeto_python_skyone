@@ -64,4 +64,9 @@ while True:
 
 squads.append(squad)
 
+for squad in squads:
+    print(f'\n-------------------------------{squad.nome}-------------------------------')
+    print(f'Techlead: {squad.techlead.nome}')
+    print('\n----Devs do squad----')
+
 
