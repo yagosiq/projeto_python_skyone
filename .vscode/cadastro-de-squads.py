@@ -5,6 +5,9 @@ class Pessoa:
     def __init__(self, nome, fone):
         self.nome = nome
         self.fone = fone
+    
+    def exibir(self):
+        print(f'->{self.nome} - {self.fone}')
 
 class Squad: 
     def __init__(self, nome, techlead=None, devs=None):
@@ -31,8 +34,9 @@ class Dev(Colaborador):
         def incluir_squad(self, squad):
             self.squad = squad 
 
-        def incluir_dev(self, dev):
-            self.devs.append(dev)
+        def exibir(self):
+            super().exibir()
+            print(f'    Cargo de {self.cargo} na squad {self.squad.nome}\n')
 
 while True:
     squads = []
@@ -68,5 +72,7 @@ for squad in squads:
     print(f'\n-------------------------------{squad.nome}-------------------------------')
     print(f'Techlead: {squad.techlead.nome}')
     print('\n----Devs do squad----')
-
+    for dev in squad.devs:
+        dev.exibir()
+    print(f'\n-------------------------------{squad.nome}-------------------------------')
 
