@@ -14,7 +14,7 @@ class Squad:
 
     def incluir_techlead(self, techlead):
         self.techlead = techlead
-    
+
     def incluir_devs(self, devs):
         self.devs = devs
 
@@ -27,3 +27,9 @@ class Dev(Colaborador):
     def __init__(self, nome, fone, cargo, squad=None):
         super().__init__(nome, fone, squad)
         self.cargo = cargo
+
+        def incluir_squad(self, squad):
+            self.squad = squad 
+
+        def incluir_dev(self, dev):
+            self.devs.append(dev)
