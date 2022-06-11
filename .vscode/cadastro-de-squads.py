@@ -47,6 +47,17 @@ while True:
 
     squads.append(squad)
 
+    nome_dev = input('\nNome do desenvolvedor: ')
+    fone_dev = input('Tlefone do desenvolvedor: ')
+    cargo_dev = input('Cargo do desenvolvedor: ')
+    dev = Dev(nome_dev, fone_dev, cargo_dev)
+
+    option = Dev('\nDeseja adicionar mais uma squad[S/N]: ')
+
     option = input('\nDeseja adicionar mais uma squad [S/N]: ')
     if option in 'Nn':
         break 
+
+squads.append(squad)
+
+
