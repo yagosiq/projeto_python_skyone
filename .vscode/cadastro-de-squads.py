@@ -1,3 +1,6 @@
+from mimetypes import init
+
+
 class Pessoa: 
     def __init__(self, nome, fone):
         self.nome = nome
@@ -14,3 +17,13 @@ class Squad:
     
     def incluir_devs(self, devs):
         self.devs = devs
+
+class Colaborador(Pessoa):
+    def __init__(self, nome, fone, squad=None):
+        super().__init__(nome, fone)
+        self.squad = squad
+
+class Dev(Colaborador):
+    def __init__(self, nome, fone, cargo, squad=None):
+        super().__init__(nome, fone, squad)
+        self.cargo = cargo
