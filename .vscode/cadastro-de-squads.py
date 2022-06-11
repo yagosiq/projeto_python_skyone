@@ -26,24 +26,29 @@ class Colaborador(Pessoa):
         super().__init__(nome, fone)
         self.squad = squad
 
+    def incluir_squad(self, squad):
+        self.squad = squad 
+
 class Dev(Colaborador):
     def __init__(self, nome, fone, cargo, squad=None):
         super().__init__(nome, fone, squad)
         self.cargo = cargo
 
-        def incluir_squad(self, squad):
+    def incluir_squad(self, squad):
             self.squad = squad 
 
-        def exibir(self):
+    def exibir(self):
             super().exibir()
             print(f'    Cargo de {self.cargo} na squad {self.squad.nome}\n')
+
+print('\n-==-==-==-==-==-==-==-==Sky.One Solutions-==-==-==-==-==-==-==-==')
+print('Bem vindo ao sistema do cadastro de squads!!!\n')
 
 while True:
     squads = []
     nome_squad = input('\nNome da squad: ')
     nome_techlead = input('Nome do Techlead da squad: ')
-    fone_techlead = input('Telefone do techlead: ')
-
+    fone_techlead = input('Telefone do techlead: '), 
     squad = Squad(nome_squad)
     techlead = Colaborador(nome_techlead, fone_techlead)
     squad.incluir_techlead(techlead)
@@ -52,7 +57,7 @@ while True:
     squads.append(squad)
 
     nome_dev = input('\nNome do desenvolvedor: ')
-    fone_dev = input('Tlefone do desenvolvedor: ')
+    fone_dev = input('Telefone do desenvolvedor: ')
     cargo_dev = input('Cargo do desenvolvedor: ')
     dev = Dev(nome_dev, fone_dev, cargo_dev)
     dev.incluir_squad(squad)
@@ -76,3 +81,4 @@ for squad in squads:
         dev.exibir()
     print(f'\n-------------------------------{squad.nome}-------------------------------')
 
+print('\n-==-==-==-==-==-==-==-==Sky.One Solutions-==-==-==-==-==-==-==-==')
