@@ -33,3 +33,8 @@ class Dev(Colaborador):
 
         def incluir_dev(self, dev):
             self.devs.append(dev)
+
+squads = []
+nome_squad = input('\nNome da squad: ')
+nome_techlead = input('Nome do Techlead da squad: ')
+fone_techlead = input('Telefone do techlead: ')
