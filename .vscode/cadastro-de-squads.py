@@ -54,6 +54,10 @@ while True:
     dev.incluir_squad(squad)
     squad.incluir_dev(dev)
 
+    option = input('Deseja adicionar mais um dev[S/N]: ')
+    if option in 'Nn':
+        break 
+
     option = input('\nDeseja adicionar mais uma squad [S/N]: ')
     if option in 'Nn':
         break 
