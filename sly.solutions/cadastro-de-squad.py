@@ -47,6 +47,7 @@ while True:
     cargo_dev = input('Cargo do desenvolvedor: ')
     dev = Dev(nome_dev, fone_dev, cargo_dev)
     dev.incluir_squad(squad)
+    squad.incluir_dev(dev)
 
     option = input('\nDeseja adicionar mais uma squad [S/N]: ')
     if option in 'Nn':
