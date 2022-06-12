@@ -34,3 +34,6 @@ class Dev(Colaborador):
     nome_squad = input('\nNome da squad: ')
     nome_techlead = input('Nome do techlead da squad: ')
     fone_techlead = input('Telefone do techlead: ')
+
+squads.append(squad)
+
