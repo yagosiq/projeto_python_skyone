@@ -23,3 +23,6 @@ class Dev(Colaborador):
     def __init__(self, nome, fone, cargo, squad=None):
         super().__init__(nome, fone, squad)
         self.cargo = cargo
+
+    def incluir_squad(self, squad):
+            self.squad = squad 
