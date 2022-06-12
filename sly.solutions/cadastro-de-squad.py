@@ -10,3 +10,6 @@ class Squad:
         self.nome = nome
         self.devs = []
         self.techlead = techlead
+        
+    def incluir_techlead(self, techlead):
+    self.techlead = techlead
