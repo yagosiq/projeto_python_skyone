@@ -1,5 +1,6 @@
 from mimetypes import init
 
+
 class Pessoa: 
     def __init__(self, nome, fone):
         self.nome = nome
@@ -13,7 +14,7 @@ class Squad:
         self.nome = nome
         self.devs = []
         self.techlead = techlead
-        
+
     def incluir_techlead(self, techlead):
         self.techlead = techlead
 
@@ -25,17 +26,23 @@ class Colaborador(Pessoa):
         super().__init__(nome, fone)
         self.squad = squad
 
+    def incluir_squad(self, squad):
+        self.squad = squad 
+
 class Dev(Colaborador):
     def __init__(self, nome, fone, cargo, squad=None):
         super().__init__(nome, fone, squad)
         self.cargo = cargo
 
     def incluir_squad(self, squad):
-            self.squad = squad 
+        self.squad = squad 
 
     def exibir(self):
         super().exibir()
         print(f'    Cargo de {self.cargo} na squad {self.squad.nome}\n')
+
+print('\n-==-==-==-==-==-==-==-==Sky.One Solutions-==-==-==-==-==-==-==-==')
+print('Bem vindo ao sistema do cadastro de squads!!!\n')
 
 while True:
     squads = []
@@ -65,10 +72,10 @@ while True:
         break 
 
 for squad in squads:
-    print(f'\n-----------------------{squad.nome}-----------------------')
+    print(f'\n-------------------------------{squad.nome}-------------------------------')
     print(f'Techlead: {squad.techlead.nome}')
     print('\n----Devs do squad----')
     for dev in squad.devs:
         dev.exibir()
-    print(f'\n-----------------------{squad.nome}-----------------------')
+    print(f'\n-------------------------------{squad.nome}-------------------------------')
     print('\n-==-==-==-==-==-==-==-==Sky.One Solutions-==-==-==-==-==-==-==-==')
