@@ -56,4 +56,8 @@ while True:
     option = input('\nDeseja adicionar mais uma squad [S/N]: ')
     if option in 'Nn':
         break 
-    
+
+for squad in squads:
+    print(f'\n-----------------------{squad.nome}-----------------------')
+    print(f'Techlead: {squad.techlead.nome}')
+    print('\n----Devs do squad----')
